@@ -1,0 +1,19 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "Hack challenges",
+  "main": "script.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle-contract": "^3.0.6",
+    "web3": "0.20.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"run 'truffle test'\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
