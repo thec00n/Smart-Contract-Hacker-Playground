@@ -66,8 +66,7 @@ contract Wallet is WalletEvents {
   }
 
   // FIELDS
-  address constant _walletLibraryDefault = 0xcafecafecafecafecafecafecafecafecafecafe;
-  address internal _walletLibrary = _walletLibraryDefault;
+  address constant _walletLibrary = 0xcafecafecafecafecafecafecafecafecafecafe;
 
   // the number of owners that must confirm the same operation before it is run.
   uint public m_required;
