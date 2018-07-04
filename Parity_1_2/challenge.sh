@@ -1,11 +1,23 @@
 #!/bin/bash
-trap 'kill $(jobs -p)' EXIT
+if [ "$1" == "" ]; then
+    echo "Please select challenge 1 or 2"
+    exit
+else
+	trap 'kill $(jobs -p)' EXIT
+	rm -rf build
+    if [ "$1" == "1" ]; then
+		rm ./contracts/WalletLibrary.sol
+		rm ./contracts/Wallet.sol
+		cp ./library/WalletLibrary.sol ./contracts/WalletLibrary.sol
+		cp ./library/Wallet.sol ./contracts/Wallet.sol	
+	elif [ "$1" == "2" ]; then
+		rm ./contracts/WalletLibrary.sol
+		rm ./contracts/Wallet.sol
+		cp ./library/WalletLibraryPatched.sol ./contracts/WalletLibrary.sol
+		cp ./library/WalletPatched.sol ./contracts/Wallet.sol	
+    fi	
+fi
 
-rm -rf build
-rm ./contracts/WalletLibrary.sol
-rm ./contracts/Wallet.sol
-cp ./library/WalletLibrary.sol ./contracts/WalletLibrary.sol
-cp ./library/Wallet.sol ./contracts/Wallet.sol
 
 printf "Running test network...\n"
 # obfuscate private keys (useful if output is hidden)
@@ -24,7 +36,7 @@ printf "or 'truffle test' to assert if the goal is complete\n\n"
 printf "GOOD LUCK!\n"
 printf "\n=========================================================================================\n\n"
 
-for i in `seq 1 5`; do
+for i in `seq 1 1337`; do
     sleep 1337
     echo -n "."
 done
