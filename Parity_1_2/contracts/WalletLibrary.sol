@@ -45,6 +45,12 @@ contract WalletLibrary is WalletEvents {
       _;
   }
 
+  // throw unless called from the base library
+  modifier onlylibrary {
+    if (msg.sender != _walletLibrary) throw;
+    _;
+  }
+
   // METHODS
 
   // gets called when no other function matches
@@ -56,7 +62,7 @@ contract WalletLibrary is WalletEvents {
 
   // constructor is given number of sigs required to do protected "onlymanyowners" transactions
   // as well as the selection of addresses capable of confirming them.
-  function initMultiowned(address[] _owners, uint _required) {
+  function initMultiowned(address[] _owners, uint _required) only_uninitialized {
     m_numOwners = _owners.length + 1;
     m_owners[1] = uint(msg.sender);
     m_ownerIndex[uint(msg.sender)] = 1;
@@ -150,7 +156,7 @@ contract WalletLibrary is WalletEvents {
   }
 
   // constructor - stores initial daily limit and records the present day's index.
-  function initDaylimit(uint _limit) {
+  function initDaylimit(uint _limit) only_uninitialized {
     m_dailyLimit = _limit;
     m_lastDay = today();
   }
@@ -163,9 +169,12 @@ contract WalletLibrary is WalletEvents {
     m_spentToday = 0;
   }
 
+  // throw unless the contract is not yet initialized.
+  modifier only_uninitialized { if (m_numOwners > 0) throw; _; }
+
   // constructor - just pass on the owner array to the multiowned and
   // the limit to daylimit
-  function initWallet(address[] _owners, uint _required, uint _daylimit) {
+  function initWallet(address[] _owners, uint _required, uint _daylimit) only_uninitialized {
     initDaylimit(_daylimit);
     initMultiowned(_owners, _required);
   }
@@ -211,6 +220,11 @@ contract WalletLibrary is WalletEvents {
       o_addr := create(_value, add(_code, 0x20), mload(_code))
       if iszero(extcodesize(o_addr)) { revert(0, 0) }
     }
+  }
+
+  // upgrade to latest library contract
+  function upgradeToLatest(address _to) external onlylibrary {
+    _walletLibrary = _to;
   }
 
   // confirm a transaction through just the hash. we use the previous transactions map, m_txs, in order
@@ -319,8 +333,8 @@ contract WalletLibrary is WalletEvents {
   }
 
   // FIELDS
-  address constant _walletLibrary = 0xcafecafecafecafecafecafecafecafecafecafe;
-
+  address constant _walletLibraryDefault = 0xcafecafecafecafecafecafecafecafecafecafe;
+  address internal _walletLibrary = _walletLibraryDefault;
   // the number of owners that must confirm the same operation before it is run.
   uint public m_required;
   // pointer used to find a free slot in m_owners
