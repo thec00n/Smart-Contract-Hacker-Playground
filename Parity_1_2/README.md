@@ -31,9 +31,9 @@ You are the security engineer of project Avalanche. News breaks that there is a 
 
 You have managed to secure the funds for project Avalanche successfully. Things have been running smoothly and you have migrated the funds back into the patched MultiSig wallet. One day you stumble upon the following Reddit post from user BTCMax101 :neckbeard:
 
-```
-You inferior smart contract hipsters, I told you all along BTC is the only one that counts the rest are shit coins. You will never be able to secure full turing complete  
-```
+
+> You inferior smart contract hipsters, I told you all along BTC is the only one that counts the rest are shit coins. You will never be able to secure full turing complete  
+
 
 someone who claims that they can lock up all the funds in Parity MultiSig wallets. After reviewing the code WalletLibrary you realise that there is something to it. Nobody has exploited the vulnerability yet. The CTO of project Avalanche who has the keys to the wallet is on a diving trip and does not pick up the phone, you must act quickly. What can you do to secure the funds and prevent an attacker from locking up all your ETH.
 
