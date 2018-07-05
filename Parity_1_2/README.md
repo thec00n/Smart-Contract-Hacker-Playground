@@ -28,7 +28,7 @@ You check and you have some ETH in your wallet 0xd34435a94f999e0e9fc7c3780a15aa1
 
 You have managed to secure the funds for project Avalanche successfully. Things have been running smoothly and you have migrated the funds back into the patched MultiSig wallet. One day you stumble upon the following Reddit post from user CptBTCBeard1337 :neckbeard:
 
-> You inferior smart contract hipsters, I told you all along BTC is the only one that counts the rest are shit coins. You will never be able to secure a full turing complete programing language HARHAR. I have found a vulnerability in your MultiSig wallet that allows me to destroy all your worthless coins. Dump all your ETH and buy BTC or prepare to be annihilated. You have 1 hour :alarm_clock: HARHAR.
+> You inferior smart contract hipsters, I told you all along BTC is the only one that counts the rest are shit coins. You will never be able to secure a full turing complete programing language HARHAR. I have found a vulnerability in your MultiSig wallet that allows me to destroy all your worthless coins. Dump all your ETH and buy BTC or prepare to be annihilated. You have 1 hour :boom: HARHAR.
 
 What a jerk ... after reviewing the code in WalletLibrary you realise that there might be something to it. The CTO of project Avalanche who has the keys to the wallet is on a diving trip and does not pick up the phone ... :scream: ... you must act quickly. What can you do to secure the funds and prevent CptBTCBeard1337 from locking up all your ETH.
 
