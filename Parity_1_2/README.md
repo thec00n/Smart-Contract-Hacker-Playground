@@ -1,24 +1,17 @@
-##Welcome to the Smart Contract Hacker challenge!
+# Welcome to the Parity MultiSig hacking challenge 
 
-There're 2 different tasks for you to tackle, both based on infamous Parity MultiSig wallet.
+This repository contains two challenges that are based on the Parity hacks from July and November 2017. 
 
-First you need to make sure you have following dependencies installed:
+## Installation :minidisc:
 
-* Node 7.* with npm
-* Truffle 
-* Ganache-Cli
+- Make sure you have `node` installed in a recent version installed.
+- Run `npm install` to install dependencies. 
 
-Node is [available at](https://nodejs.org/en/download/releases/), to install Truffle & Ganache-Cli run
+## Level 1 :video_game:
 
-```bash
-$ npm install -g truffle
-$ npm install -g ganache
-```
 
-Also install package dependencies run
-```bash
-$ npm install
-```
+You are the security engineer of project Avalanche. News breaks that there is a vulnerability that allows attackers to withdraw all funds from the MultiSig wallet that project Avalanche is using. The CTO of project Avalanche who has the keys to the wallet is on a silent retreat and does not pick up the phone. After panicking for few moments you realise you have only one choice but to hack the wallet yourself and secure the funds (100k ETH) before someone else does.
+
 
 Afterwards launch corresponding challenge script which contains description
 
