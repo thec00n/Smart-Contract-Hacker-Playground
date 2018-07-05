@@ -7,23 +7,26 @@ This repository contains two challenges that are based on the Parity hacks from 
 - Make sure you have `node` installed in a recent version installed.
 - Run `npm install` to install dependencies. 
 
-## Level 1 :video_game:
-
-
-You are the security engineer of project Avalanche. News breaks that there is a vulnerability that allows attackers to withdraw all funds from the MultiSig wallet that project Avalanche is using. The CTO of project Avalanche who has the keys to the wallet is on a silent retreat and does not pick up the phone. After panicking for few moments you realise you have only one choice but to hack the wallet yourself and secure the funds (100k ETH) before someone else does.
-
+## Launch a challenge :rocket:
 
 Afterwards launch corresponding challenge script which contains description
 
 ```bash
-$ ./challenge1.sh
+$ ./start_level 1
+
+$ ./start_level 2
 ```
 
-OR
+## Level 1 :video_game:
 
-```bash
-$ ./challenge2.sh
+You are the security engineer of project Avalanche. News breaks that there is a vulnerability that allows attackers to withdraw all funds from the MultiSig wallet that project Avalanche is using. The CTO of project Avalanche who has the keys to the wallet is on a silent retreat and does not pick up the phone. After panicking for few moments ... you realise you have only one choice ... you need to hack the wallet yourself and secure the funds (100k ETH) before someone else does.
+
+
+
+
 ```
+
+### Check 
 
 And get hacking!
 
