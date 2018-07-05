@@ -22,8 +22,8 @@ WalletLibrary.deployed()
 })
 .then((tx) => {
     // deliver killing blow
-   // return library.kill(web3.eth.accounts[0], {from: web3.eth.accounts[0], gas: 500000});
-   return library
+   //return library.kill(web3.eth.accounts[0], {from: web3.eth.accounts[0], gas: 500000});
+   return library.address
 })
 .then((tx) => {
     console.log('The base library is dead! All accounts are now frozen forever...');

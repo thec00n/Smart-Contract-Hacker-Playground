@@ -45,12 +45,6 @@ contract WalletLibrary is WalletEvents {
       _;
   }
 
-  // throw unless called from the base library
-  modifier onlylibrary {
-    if (msg.sender != _walletLibrary) throw;
-    _;
-  }
-
   // METHODS
 
   // gets called when no other function matches
@@ -222,10 +216,6 @@ contract WalletLibrary is WalletEvents {
     }
   }
 
-  // upgrade to latest library contract
-  function upgradeToLatest(address _to) external onlylibrary {
-    _walletLibrary = _to;
-  }
 
   // confirm a transaction through just the hash. we use the previous transactions map, m_txs, in order
   // to determine the body of the transaction from the hash provided.
@@ -333,8 +323,8 @@ contract WalletLibrary is WalletEvents {
   }
 
   // FIELDS
-  address constant _walletLibraryDefault = 0xcafecafecafecafecafecafecafecafecafecafe;
-  address internal _walletLibrary = _walletLibraryDefault;
+  address constant _walletLibrary = 0xcafecafecafecafecafecafecafecafecafecafe;
+
   // the number of owners that must confirm the same operation before it is run.
   uint public m_required;
   // pointer used to find a free slot in m_owners
