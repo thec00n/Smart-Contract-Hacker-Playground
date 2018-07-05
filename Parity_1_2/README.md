@@ -36,10 +36,10 @@ You check and you have some ETH in your wallet 0xd34435a94f999e0e9fc7c3780a15aa1
 
 
 ## Notes
-- 
+
+- Restart a challenge by just CTRL+C and run `./start_level` again
 
 ## Credits
-Thanks to N1k1tung or creating the initial draft
-Thanks to XXX 
 
->Since we run on a simulated network, you can simply unlock any account. For the sake of the challenge please try to avoid that =)
+- Thanks to N1k1tung or creating the initial draft
+- Thanks to XXX 
