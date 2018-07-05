@@ -1,13 +1,13 @@
-# Welcome to the Parity MultiSig hacking challenge 
+# Parity MultiSig hacking challenge 
 
 This repository contains two challenges that are based on the Parity hacks from July (Level 1) and November 2017 (Level 2). The contracts have been sliglty modoified so they compile with more recent versions of solc. 
 
-### Installation :minidisc:
+### :minidisc::minidisc::minidisc:
 
 - Make sure you have `node` installed in a recent version installed.
 - Run `npm install` to install dependencies. 
 
-### Launch a challenge :rocket:
+### Launch a level :rocket:
 
 Afterwards launch corresponding challenge script which contains description
 
