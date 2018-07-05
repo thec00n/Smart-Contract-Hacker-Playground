@@ -1,41 +1,45 @@
-##Welcome to the Smart Contract Hacker challenge!
+# Parity MultiSig hacking challenge 
 
-There're 2 different tasks for you to tackle, both based on infamous Parity MultiSig wallet.
+This repository contains two challenges that are based on the Parity hacks from July (Level 1) and November 2017 (Level 2). The contracts have been sliglty modoified so they work with a more recent version of the compiler. 
 
-First you need to make sure you have following dependencies installed:
+## Installation :minidisc:
 
-* Node 7.* with npm
-* Truffle 
-* Ganache-Cli
+- Make sure you have `node` installed in a recent version installed.
+- Run `npm install` to install dependencies. 
 
-Node is [available at](https://nodejs.org/en/download/releases/), to install Truffle & Ganache-Cli run
+## Launch a level :rocket:
 
-```bash
-$ npm install -g truffle
-$ npm install -g ganache
-```
-
-Also install package dependencies run
-```bash
-$ npm install
-```
-
-Afterwards launch corresponding challenge script which contains description
+Launch levels with `start_level`
 
 ```bash
-$ ./challenge1.sh
+$ ./start_level 1
+
+$ ./start_level 2
 ```
 
-OR
+## Level 1 :video_game:
 
-```bash
-$ ./challenge2.sh
-```
+You are the security engineer of project Avalanche. News breaks that there is a vulnerability that allows attackers to withdraw all funds from the MultiSig wallet that project Avalanche is using. The CTO of project Avalanche who has the keys to the wallet is on a quest to find himself. He is on a silent retreat and does not pick up the phone. After panicking for few moments ... :cold_sweat: ... you realise you have only one choice ... you need to hack the wallet yourself and secure the funds (100k ETH) before someone else does.
 
-And get hacking!
+You check and you have some ETH in your wallet 0xd34435a94f999e0e9fc7c3780a15aa1a815f76e9 to send transactions. You complete the level when have you more than 100k ETH in your wallet. Run `./get_status 1` to make sure you completed the level successfully.  
 
-###Notes
 
->Since we run on a simulated network, you can simply unlock any account. For the sake of the challenge please try to avoid that =)
+## Level 2 :video_game:
 
->When restarting a challenge or starting a new one, make sure to close the opened network terminal.
+You have managed to secure the funds for project Avalanche successfully. Things have been running smoothly and you have migrated the funds back into the patched MultiSig wallet. One day you stumble upon the following Reddit post from user CptBTCBeard1337 :neckbeard:
+
+> You inferior smart contract hipsters, I told you all along BTC is the only one that counts the rest are shit coins. You will never be able to secure a full turing complete programing language HARHAR. I have found a vulnerability in your MultiSig wallet that allows me to destroy all your worthless coins. Dump all your ETH and buy BTC or prepare to be annihilated. You have 1 hour :boom: HARHAR.
+
+What a jerk ... after reviewing the code in WalletLibrary you realise that there might be something to it. The CTO of project Avalanche who has the keys to the wallet is on a diving trip and does not pick up the phone ... :scream: ... you must act quickly. What can you do to secure the funds and prevent CptBTCBeard1337 from locking up all your ETH.
+
+You check and you have some ETH in your wallet 0xd34435a94f999e0e9fc7c3780a15aa1a815f76e9 to send transactions. You complete the level when CptBTCBeard1337 is no longer able to lockup your ETH.  Run `./get_status 2` to make sure you completed the level successfully.  
+
+
+## Notes
+
+- Restart a challenge by just CTRL+C and run `./start_level` again
+
+## Credits
+
+- Thanks to N1k1tung for creating the initial draft
+- Thanks to XXX 
