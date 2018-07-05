@@ -4,7 +4,7 @@ This repository contains two challenges that are based on the Parity hacks from 
 
 ## Installation :minidisc:
 
-- Make sure you have `node` installed in a recent version installed.
+- Make sure you have `node` and `npm` installed.
 - Run `npm install` to install dependencies. 
 
 ## Launch a level :rocket:
