@@ -31,6 +31,8 @@ printf "Deploying the contracts ..\n"
 npx truffle migrate --network challenge
 printf "\n=========================================================================================\n\n"
 
+printf "Happy Hacking\n\n"
+
 for i in `seq 1 1337`; do
     sleep 1337
     echo -n "."
