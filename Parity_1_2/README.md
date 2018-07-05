@@ -1,6 +1,6 @@
 # Parity MultiSig hacking challenge 
 
-This repository contains two challenges that are based on the Parity hacks from July (Level 1) and November 2017 (Level 2). The contracts have been sliglty modoified so they compile with more recent versions of solc. 
+This repository contains two challenges that are based on the Parity hacks from July (Level 1) and November 2017 (Level 2). The contracts have been sliglty modoified so they work with a more recent version of the compiler. 
 
 ## Installation :minidisc:
 
@@ -41,5 +41,5 @@ You check and you have some ETH in your wallet 0xd34435a94f999e0e9fc7c3780a15aa1
 
 ## Credits
 
-- Thanks to N1k1tung or creating the initial draft
+- Thanks to N1k1tung for creating the initial draft
 - Thanks to XXX 
