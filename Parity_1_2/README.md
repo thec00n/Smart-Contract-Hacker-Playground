@@ -41,5 +41,4 @@ You check and you have some ETH in your wallet 0xd34435a94f999e0e9fc7c3780a15aa1
 
 ## Credits
 
-- Thanks to N1k1tung for creating the initial draft
-- Thanks to XXX 
+- Thanks to N1k1tung for creating the prototype
