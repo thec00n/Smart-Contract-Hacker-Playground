@@ -19,11 +19,10 @@ else
 fi
 
 
-printf "Running test network...\n"
-# obfuscate private keys (useful if output is hidden)
 KEY1="D2823AE08A737570063BCC8A6D396D6A8A5C2B2A4CD4A5BA79C9AA349AF7205F"
 KEY2="2711FE682D8E627393F240686FC49E3AD0CD822A736CAE7FFEECD33924D99BF0"
-# run test network with our hacking account and 2 founder accounts for the MultiSig wallet, optionally remove '> /dev/null' to show output 
+
+printf "Running test network...\n"
 npx ganache-cli --account '0x601aaaf5f9ac507ffd34eb3b10bb1bf7b382bf312f460572ba207e4e2b221787, 20000000000000000000' --account "0x$KEY1, 50000100000000000000000" --account "0x$KEY2, 50000100000000000000000" -l 50000000 >/dev/null  & 
 
 

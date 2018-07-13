@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ "$1" != "3" ]; then
+    echo "Please select challenge 3"
+    exit
+else
+	trap 'kill $(jobs -p)' EXIT
+	rm -rf build
+fi
+
+KEY1="D2823AE08A737570063BCC8A6D396D6A8A5C2B2A4CD4A5BA79C9AA349AF7205F"
+
+printf "Running test network...\n"
+npx ganache-cli --account '0x601aaaf5f9ac507ffd34eb3b10bb1bf7b382bf312f460572ba207e4e2b221787, 10000000000000000000' --account "0x0C6180DDAB5095644E3D3C23776B00742288AFD329E80C37B0445C584EF0220A, 10000000000000000000" --account "0x$KEY1, 1200000000000000000000" -l 50000000 >/dev/null  &
+
+
+printf "Deploying the contracts ..\n"
+npx truffle compile > /dev/null
+npx truffle migrate
+printf "\n=========================================================================================\n\n"
+
+printf "Happy Hacking\n\n"
+
+for i in `seq 1 1337`; do
+    sleep 1337
+    echo -n "."
+done
