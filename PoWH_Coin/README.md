@@ -2,6 +2,6 @@
 
 ## Level 1 :video_game:
 
-## Notes
+## Credits
 
-- Restart a challenge by just CTRL+C and run `./start_level` again
+- Thanks to N1k1tung for creating the prototype
