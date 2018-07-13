@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ "$1" == "" ]; then
-    echo "Please select challenge 1 or 2"
+    echo "Please select level 1 or 2"
     exit
 else
 	trap 'kill $(jobs -p)' EXIT
