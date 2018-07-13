@@ -13,13 +13,15 @@ POWH.setProvider(provider);
 if(process.argv[2] == 1){
 	POWH.deployed().then((instance) => {
 
-	var you_b = web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]))
+	var you_b1 = web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]))
+	var you_b2 = web3.fromWei(web3.eth.getBalance(web3.eth.accounts[1]))
 	var coin_b = web3.fromWei(web3.eth.getBalance(instance.address))
 
-	if(you_b >= 1000){
+	if(you_b1 >= 1000 || you_b2 >= 1000 ){
 		console.log("Congratulations: You have solved Challenge !!!!")
 		console.log('PoWH contract: ' + coin_b + ' ETH');
 		console.log('YOU: ' + web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0])) + ' ETH');
+		console.log('YOU: ' + web3.fromWei(web3.eth.getBalance(web3.eth.accounts[1])) + ' ETH');
 	} else {
 		console.log("Try harder, time is ticking!")
 	}
