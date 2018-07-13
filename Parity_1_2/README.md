@@ -1,22 +1,5 @@
 # Parity MultiSig hacking challenge 
 
-This repository contains two challenges that are based on the Parity hacks from July (Level 1) and November 2017 (Level 2). The contracts have been sliglty modoified so they work with a more recent version of the compiler. 
-
-## Installation :minidisc:
-
-- Make sure you have `nodejs` 10.x and `npm` 6.x installed
-- Run `npm install` to install dependencies. 
-
-## Launch a level :rocket:
-
-Launch levels with `start_level`
-
-```bash
-$ ./start_level 1
-
-$ ./start_level 2
-```
-
 ## Level 1 :video_game:
 
 You are the security engineer of project Avalanche. News breaks that there is a vulnerability that allows attackers to withdraw all funds from the MultiSig wallet that project Avalanche is using. The CTO of project Avalanche who has the keys to the wallet is on a quest to find himself. He is on a silent retreat and does not pick up the phone. After panicking for few moments ... :cold_sweat: ... you realise you have only one choice ... you need to hack the wallet yourself and secure the funds (100k ETH) before someone else does.
@@ -34,10 +17,6 @@ What a jerk ... after reviewing the code in WalletLibrary you realise that there
 
 You check and you have some ETH in your wallet 0xd34435a94f999e0e9fc7c3780a15aa1a815f76e9 to send transactions. You complete the level when CptBTCBeard1337 is no longer able to lockup your ETH.  Run `./get_status 2` to make sure you completed the level successfully.  
 
-
-## Notes
-
-- Restart a challenge by just CTRL+C and run `./start_level` again
 
 ## Credits
 
